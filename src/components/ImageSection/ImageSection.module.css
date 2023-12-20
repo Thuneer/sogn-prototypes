@@ -1,0 +1,39 @@
+.section {
+  margin: 200px 0;
+}
+
+.imageContainer img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 21px;
+}
+
+.desc {
+  font-size: 18px;
+  margin-bottom: 0;
+  line-height: 1.7em;
+}
+
+.textContainer {
+  padding-left: 50px;
+}
+
+.test {
+  flex-direction: row-reverse;
+}
+
+.test .textContainer {
+  padding-left: 0;
+  padding-right: 50px;
+}

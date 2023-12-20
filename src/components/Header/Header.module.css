@@ -1,0 +1,32 @@
+.header {
+  height: 102px;
+  display: flex;
+  align-items: center;
+  background-color: #f4f5f6;
+}
+
+.left img {
+  height: 28px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.right div {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.right div svg {
+  margin-right: 8px;
+}

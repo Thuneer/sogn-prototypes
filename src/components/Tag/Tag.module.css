@@ -1,0 +1,20 @@
+.tags {
+  background-color: #d2eafd;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.red {
+  background-color: #fddfe0;
+}
+
+.yellow {
+  background-color: #faeec2;
+}
+
+.blue {
+  background-color: #d2eafd;
+}

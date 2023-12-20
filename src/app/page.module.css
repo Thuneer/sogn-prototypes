@@ -1,0 +1,17 @@
+.main {
+  margin: 32px;
+  background: rgb(243, 243, 243);
+  display: inline-block;
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.main h2 {
+  margin-bottom: 16px;
+  font-size: 28px;
+}
+
+.main a {
+  text-decoration: none;
+  font-size: 18px;
+}
