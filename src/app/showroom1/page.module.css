@@ -101,3 +101,34 @@
   height: 56px;
   margin-bottom: 28px;
 }
+
+.tomato {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tomato p {
+  color: black;
+  background-color: white;
+  padding: 40px;
+  width: 680px;
+  border-radius: 4px;
+  font-size: 18px;
+  border-left: 12px solid rgb(32, 122, 224);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 1.7em;
+  margin-bottom: 0;
+}
+
+.potato1 {
+  display: inline-block;
+  position: absolute;
+  margin-top: 100px;
+}
+
+.potato1 img {
+  width: 300px;
+}

@@ -3,6 +3,13 @@ import classes from "./ImageSection.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { Tag } from "../Tag/Tag";
 import cn from "classnames";
+import {
+  Fade,
+  Slide,
+  Reveal,
+  AttentionSeeker,
+  JackInTheBox,
+} from "react-awesome-reveal";
 
 type ImageSectionProps = {
   image: string;
@@ -26,17 +33,21 @@ export const ImageSection = ({
           className={cn(classes.row, { [classes.test]: imgDir === "right" })}
         >
           <Col xl={6}>
-            <div className={classes.imageContainer}>
-              <img src={image} alt="image" />
-            </div>
+            <Fade triggerOnce={true}>
+              <div className={classes.imageContainer}>
+                <img src={image} alt="image" />
+              </div>
+            </Fade>
           </Col>
 
           <Col xl={6}>
-            <div className={classes.textContainer}>
-              <Tag color={tagColor}>Offentlig sektor</Tag>
-              <h2 className={classes.title}>{title}</h2>
-              <p className={classes.desc}>{desc}</p>
-            </div>
+            <Fade triggerOnce={true}>
+              <div className={classes.textContainer}>
+                <Tag color={tagColor}>Offentlig sektor</Tag>
+                <h2 className={classes.title}>{title}</h2>
+                <p className={classes.desc}>{desc}</p>
+              </div>
+            </Fade>
           </Col>
         </Row>
       </Container>

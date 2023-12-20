@@ -36,19 +36,35 @@ export default function Home() {
   }
 `;
 
+  const customAnimation2 = keyframes`
+from {
+  opacity: 0;
+  transform: translateX(-100px) rotate(-45deg);
+}
+
+to {
+  opacity: 1;
+  transform: translateX(70px) rotate(0);
+}
+`;
+
   return (
     <main className={styles.main}>
       <Header />
 
       <div className={classes.header}>
         <div className={classes.squareContainerRight}>
-          <Parallax rotate={[75, 0]} easing="easeInQuad">
+          <Parallax rotate={[75, 0]} translateY={[-25, 50]} easing="easeInQuad">
             <div className={cn(classes.square)}></div>
           </Parallax>
         </div>
 
         <div className={classes.squareContainerLeft}>
-          <Parallax rotate={[40, 100]} easing="easeInQuad">
+          <Parallax
+            rotate={[40, 100]}
+            translateY={[-25, 50]}
+            easing="easeInQuad"
+          >
             <div className={cn(classes.square, classes.square2)}></div>
           </Parallax>
         </div>
@@ -74,6 +90,7 @@ export default function Home() {
 
       <div className={classes.test}>
         <Reveal
+          triggerOnce={true}
           keyframes={customAnimation}
           duration={800}
           cascade
@@ -103,10 +120,32 @@ export default function Home() {
         </Reveal>
       </div>
 
-      <ParallaxBanner style={{ aspectRatio: "4 / 1" }}>
-        <div className={classes.tomato}>Test</div>
-        <ParallaxBannerLayer image="img1.jpg" speed={-20} />
-      </ParallaxBanner>
+      <ParallaxBanner
+        style={{
+          aspectRatio: "3 / 1",
+          borderBottom: "1px solid #c4c4c4",
+          borderTop: "1px solid #c4c4c4",
+        }}
+        layers={[
+          { image: "img1.jpg", speed: -20 },
+          {
+            speed: -40,
+            children: (
+              <div className={classes.tomato}>
+                <p>
+                  {" "}
+                  Still project the in particular, in our low of and explain
+                  needed than acquiesce that following general used queen
+                  expect, such, yourself sleep concept have shudder. The a
+                  attempt, his music. He first, concept of the out an and
+                  frequency; Freshlybrewed the six pay he in of some suggests
+                  gone.
+                </p>
+              </div>
+            ),
+          },
+        ]}
+      ></ParallaxBanner>
 
       <div className={classes.test}>
         <Reveal
@@ -114,6 +153,7 @@ export default function Home() {
           duration={800}
           cascade
           damping={0.3}
+          triggerOnce={true}
         >
           <p>
             Still project the in particular, in our low of and explain needed
@@ -136,17 +176,25 @@ export default function Home() {
       </div>
 
       <div className={classes.quoteContainer}>
-        <div className={classes.quote}>
-          <img src="quote.svg" alt="" />
-          <p className={classes.quoteText}>
-            Still project the in particular, in our low of and explain needed
-            than acquiesce that following general used queen expect, such,
-            yourself sleep concept have shudder. The a attempt, his music. He
-            first, concept of the out an and frequency; Freshlybrewed the six
-            pay he in of some suggests gone.
-          </p>
-          <p className={classes.quoteAuthor}>- John Doe</p>
-        </div>
+        <Fade triggerOnce={true}>
+          <div className={classes.quote}>
+            <img src="quote.svg" alt="" />
+            <p className={classes.quoteText}>
+              Still project the in particular, in our low of and explain needed
+              than acquiesce that following general used queen expect, such,
+              yourself sleep concept have shudder. The a attempt, his music. He
+              first, concept of the out an and frequency; Freshlybrewed the six
+              pay he in of some suggests gone.
+            </p>
+            <p className={classes.quoteAuthor}>- John Doe</p>
+          </div>
+        </Fade>
+      </div>
+
+      <div className={classes.potato1}>
+        <Reveal keyframes={customAnimation2} duration={1000} triggerOnce={true}>
+          <img src="img/elements/element1blue.svg" alt="Img" />
+        </Reveal>
       </div>
 
       <div className={classes.test}>
@@ -155,6 +203,7 @@ export default function Home() {
           duration={800}
           damping={0.3}
           cascade
+          triggerOnce={true}
         >
           <p>
             Still project the in particular, in our low of and explain needed
@@ -169,6 +218,13 @@ export default function Home() {
             divided the bathroom started notice life my pile hall of background
             however that missions commas, respond was process from the it up,
             first minutes. Towards the turned.
+          </p>
+          <p>
+            Still project the in particular, in our low of and explain needed
+            than acquiesce that following general used queen expect, such,
+            yourself sleep concept have shudder. The a attempt, his music. He
+            first, concept of the out an and frequency; Freshlybrewed the six
+            pay he in of some suggests gone.
           </p>
         </Reveal>
       </div>
@@ -202,6 +258,31 @@ export default function Home() {
         imgDir="right"
         tagColor="blue"
       />
+
+      <div className={classes.test}>
+        <Reveal
+          keyframes={customAnimation}
+          duration={800}
+          damping={0.3}
+          cascade
+          triggerOnce={true}
+        >
+          <p>
+            Still project the in particular, in our low of and explain needed
+            than acquiesce that following general used queen expect, such,
+            yourself sleep concept have shudder. The a attempt, his music. He
+            first, concept of the out an and frequency; Freshlybrewed the six
+            pay he in of some suggests gone.
+          </p>
+          <p>
+            Concept and found film organization. Everyone a like doctor comments
+            them. As time line the bored the too that shall gods their during
+            divided the bathroom started notice life my pile hall of background
+            however that missions commas, respond was process from the it up,
+            first minutes. Towards the turned.
+          </p>
+        </Reveal>
+      </div>
     </main>
   );
 }
