@@ -1,0 +1,14 @@
+.section {
+  width: 650px;
+  margin: 90px auto;
+  font-size: 18px;
+  line-height: 1.65em;
+}
+
+.section > div > p {
+  margin-bottom: 32px;
+}
+
+.section > div:last-child > p {
+  margin-bottom: 0;
+}

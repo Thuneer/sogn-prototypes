@@ -62,17 +62,6 @@
   left: auto;
 }
 
-.test {
-  width: 650px;
-  margin: 90px auto;
-  font-size: 18px;
-  line-height: 1.65em;
-}
-
-.test p:first-child {
-  margin-bottom: 32px;
-}
-
 .quoteContainer {
   background-color: #f5dda6;
   padding: 72px 0;
@@ -110,14 +99,32 @@
   align-items: center;
 }
 
+.tomato2 {
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+}
+
+.tomato2::before {
+  content: "";
+  background-color: #78c1f9;
+  height: 110px;
+  width: 110px;
+  top: -55px;
+  left: -55px;
+  position: absolute;
+  z-index: 5;
+  border-radius: 50%;
+}
+
 .tomato p {
   color: black;
   background-color: white;
-  padding: 40px;
-  width: 680px;
+  padding: 52px;
+  width: 700px;
   border-radius: 4px;
   font-size: 18px;
-  border-left: 12px solid rgb(32, 122, 224);
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   line-height: 1.7em;
   margin-bottom: 0;

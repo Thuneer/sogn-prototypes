@@ -1,21 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import styles from "./page.module.css";
 import { Header } from "@/components/Header/Header";
-import {
-  Fade,
-  Slide,
-  Reveal,
-  AttentionSeeker,
-  JackInTheBox,
-} from "react-awesome-reveal";
+import { Fade, Reveal } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
-import {
-  Parallax,
-  ParallaxBanner,
-  ParallaxBannerLayer,
-} from "react-scroll-parallax";
+import { Parallax, ParallaxBanner } from "react-scroll-parallax";
+import { TextSection } from "@/components/TextSection/TextSection";
 
 import { ImageSection } from "@/components/ImageSection/ImageSection";
 
@@ -24,18 +14,6 @@ import cn from "classnames";
 import classes from "./page.module.css";
 
 export default function Home() {
-  const customAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translate3d(0, -15px, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-`;
-
   const customAnimation2 = keyframes`
 from {
   opacity: 0;
@@ -80,7 +58,7 @@ to {
       </div>
       <div className={classes.video}>
         <iframe
-          src="https://player.vimeo.com/video/877812590?h=317ddbee63"
+          src="https://player.vimeo.com/video/27246366?h=75fabdf419&color=ffffff"
           width="768"
           height="432"
           allow="autoplay; fullscreen; picture-in-picture"
@@ -88,37 +66,7 @@ to {
         ></iframe>
       </div>
 
-      <div className={classes.test}>
-        <Reveal
-          triggerOnce={true}
-          keyframes={customAnimation}
-          duration={800}
-          cascade
-          damping={0.3}
-        >
-          <p>
-            Still project the in particular, in our low of and explain needed
-            than acquiesce that following general used queen expect, such,
-            yourself sleep concept have shudder. The a attempt, his music. He
-            first, concept of the out an and frequency; Freshlybrewed the six
-            pay he in of some suggests gone.
-          </p>
-          <p>
-            Concept and found film organization. Everyone a like doctor comments
-            them. As time line the bored the too that shall gods their during
-            divided the bathroom started notice life my pile hall of background
-            however that missions commas, respond was process from the it up,
-            first minutes. Towards the turned.
-          </p>
-          <p>
-            Still project the in particular, in our low of and explain needed
-            than acquiesce that following general used queen expect, such,
-            yourself sleep concept have shudder. The a attempt, his music. He
-            first, concept of the out an and frequency; Freshlybrewed the six
-            pay he in of some suggests gone.
-          </p>
-        </Reveal>
-      </div>
+      <TextSection variation={2} />
 
       <ParallaxBanner
         style={{
@@ -127,53 +75,28 @@ to {
           borderTop: "1px solid #c4c4c4",
         }}
         layers={[
-          { image: "img1.jpg", speed: -20 },
+          { image: "img/buildings1.jpg", speed: -20 },
           {
             speed: -40,
             children: (
               <div className={classes.tomato}>
-                <p>
-                  {" "}
-                  Still project the in particular, in our low of and explain
-                  needed than acquiesce that following general used queen
-                  expect, such, yourself sleep concept have shudder. The a
-                  attempt, his music. He first, concept of the out an and
-                  frequency; Freshlybrewed the six pay he in of some suggests
-                  gone.
-                </p>
+                <div className={classes.tomato2}>
+                  <p>
+                    Still project the in particular, in our low of and explain
+                    needed than acquiesce that following general used queen
+                    expect, such, yourself sleep concept have shudder. The a
+                    attempt, his music. He first, concept of the out an and
+                    frequency; Freshlybrewed the six pay he in of some suggests
+                    gone.
+                  </p>
+                </div>
               </div>
             ),
           },
         ]}
       ></ParallaxBanner>
 
-      <div className={classes.test}>
-        <Reveal
-          keyframes={customAnimation}
-          duration={800}
-          cascade
-          damping={0.3}
-          triggerOnce={true}
-        >
-          <p>
-            Still project the in particular, in our low of and explain needed
-            than acquiesce that following general used queen expect, such,
-            yourself sleep concept have shudder. The a attempt, his music. He
-            first, concept of the out an and frequency; Freshlybrewed the six
-            pay he in of some suggests gone.
-          </p>
-          <p>
-            Normal groundtem, it see and started primarily way service boss
-            space to destined work or and by to have a answer align he is sleep
-            I as been had derived work were the girl employed both of brilliant.
-            Broad. A then the flows a for that a go her. His to unionized about
-            his elucidates made right the of bed. The all richer with have
-            however collection to his that of the in relief. As to their
-            irregular dont free twists on many view work place from that hasnt
-            even purer any position. Play. Yourself warned were, back and is.
-          </p>
-        </Reveal>
-      </div>
+      <TextSection variation={22} />
 
       <div className={classes.quoteContainer}>
         <Fade triggerOnce={true}>
@@ -197,37 +120,7 @@ to {
         </Reveal>
       </div>
 
-      <div className={classes.test}>
-        <Reveal
-          keyframes={customAnimation}
-          duration={800}
-          damping={0.3}
-          cascade
-          triggerOnce={true}
-        >
-          <p>
-            Still project the in particular, in our low of and explain needed
-            than acquiesce that following general used queen expect, such,
-            yourself sleep concept have shudder. The a attempt, his music. He
-            first, concept of the out an and frequency; Freshlybrewed the six
-            pay he in of some suggests gone.
-          </p>
-          <p>
-            Concept and found film organization. Everyone a like doctor comments
-            them. As time line the bored the too that shall gods their during
-            divided the bathroom started notice life my pile hall of background
-            however that missions commas, respond was process from the it up,
-            first minutes. Towards the turned.
-          </p>
-          <p>
-            Still project the in particular, in our low of and explain needed
-            than acquiesce that following general used queen expect, such,
-            yourself sleep concept have shudder. The a attempt, his music. He
-            first, concept of the out an and frequency; Freshlybrewed the six
-            pay he in of some suggests gone.
-          </p>
-        </Reveal>
-      </div>
+      <TextSection variation={3} />
 
       <ImageSection
         title="Carpeting switching is a look of will. Well is support"
@@ -259,30 +152,7 @@ to {
         tagColor="blue"
       />
 
-      <div className={classes.test}>
-        <Reveal
-          keyframes={customAnimation}
-          duration={800}
-          damping={0.3}
-          cascade
-          triggerOnce={true}
-        >
-          <p>
-            Still project the in particular, in our low of and explain needed
-            than acquiesce that following general used queen expect, such,
-            yourself sleep concept have shudder. The a attempt, his music. He
-            first, concept of the out an and frequency; Freshlybrewed the six
-            pay he in of some suggests gone.
-          </p>
-          <p>
-            Concept and found film organization. Everyone a like doctor comments
-            them. As time line the bored the too that shall gods their during
-            divided the bathroom started notice life my pile hall of background
-            however that missions commas, respond was process from the it up,
-            first minutes. Towards the turned.
-          </p>
-        </Reveal>
-      </div>
+      <TextSection variation={2} />
     </main>
   );
 }
